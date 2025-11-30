@@ -1,3 +1,3 @@
-# When Does Verification Pay Off?
+# When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers
 
 Coming soon!
