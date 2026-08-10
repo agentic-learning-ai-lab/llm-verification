@@ -2,30 +2,27 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Official Site for When Does Verification Pay Off?">
+  <meta name="description" content="Cross-family verification is especially effective, while reasoning post-training reduces self-improvement but strengthens cross-family improvement.">
   <meta property="og:title" content="When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers"/>
-  <meta property="og:description" content="Official Site for When Does Verification Pay Off?"/>
+  <meta property="og:description" content="Cross-family verification is especially effective, while reasoning post-training reduces self-improvement but strengthens cross-family improvement."/>
+  <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://agenticlearning.ai/llm-verification/"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image" content="https://cdn.agenticlearning.ai/211284a9e113a1ff/llm_verification.png"/>
+  <meta property="og:image:width" content="1800"/>
+  <meta property="og:image:height" content="1024"/>
+  <meta property="og:image:alt" content="An abstract illustration of a checkmark representing solution verification."/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers">
+  <meta name="twitter:description" content="Cross-family verification is especially effective, while reasoning post-training reduces self-improvement but strengthens cross-family improvement.">
+  <meta name="twitter:image" content="https://cdn.agenticlearning.ai/211284a9e113a1ff/llm_verification.png">
+  <meta name="twitter:image:alt" content="An abstract illustration of a checkmark representing solution verification.">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="large language models, LLM verification, solution verification, verifier gain, rejection sampling, test-time compute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://agenticlearning.ai/llm-verification/">
 
 
-  <title>LLM-Verification</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <title>When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -79,7 +76,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">New York University</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -95,17 +92,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span> -->
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/agentic-learning-ai-lab/llm-verification" target="_blank"
@@ -117,16 +103,6 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a> -->
-              </span>
             </div>
           </div>
         </div>
@@ -158,8 +134,8 @@
     <div class="hero-body" style="padding-top: 3rem; padding-bottom: 0rem;">
       <h2 class="title is-3" style="margin-bottom: 1rem;">Overview of Our Study</h2>
         <p>
-          Let's quickly go over our experimental setup, how we measure verification ability, and different
-          verification settings.
+          We describe our experimental setup, the metrics we use to measure verification ability, and the
+          verification settings we study.
         </p>
       <br>
       <h2 class="title is-5" style="margin-bottom: 1rem;">Models</h2>
@@ -170,27 +146,35 @@
           16 base models from the <span class="model-llama3">Llama3</span>,
           <span class="model-qwen25">Qwen2.5</span>, <span class="model-qwen3">Qwen3</span>, and
           <span class="model-deepseek">DeepSeek-R1</span> families spanning
-          0.5B-72B parameters.
+          0.5B–72B parameters.
         </p>
         <br>
       <h2 class="title is-5" style="margin-bottom: 1rem;">Datasets</h2>
         <p>
-          We evaluate our models on 6 real-world tasks (<a href="https://huggingface.co/datasets/openai/gsm8k" target="_blank"><b>GSM8K</b></a>, <a href="https://huggingface.co/datasets/TianHongZXY/aime-1983-2025" target="_blank"><b>AIME</b></a>,
-          <a href="https://huggingface.co/datasets/tau/commonsense_qa" target="_blank"><b>CSQA</b></a>, <a href="https://huggingface.co/datasets/Idavidrein/gpqa" target="_blank"><b>GPQA</b></a>, <a href="https://huggingface.co/datasets/cais/mmlu" target="_blank"><b>MMLU-STEM</b></a>, and <a href="https://huggingface.co/datasets/cais/mmlu" target="_blank"><b>MMLU-Social-Sciences</b></a>) and 3 synthetic tasks
-          (3SAT, Sudoku, and Matrix Multiplication).
+          We evaluate nine tasks spanning mathematical reasoning
+          (<a href="https://huggingface.co/datasets/openai/gsm8k" target="_blank"><b>GSM8K</b></a>,
+          <a href="https://huggingface.co/datasets/TianHongZXY/aime-1983-2025" target="_blank"><b>AIME</b></a>),
+          commonsense and factual knowledge
+          (<a href="https://huggingface.co/datasets/tau/commonsense_qa" target="_blank"><b>CSQA</b></a>,
+          <a href="https://huggingface.co/datasets/Idavidrein/gpqa" target="_blank"><b>GPQA</b></a>,
+          <a href="https://huggingface.co/datasets/cais/mmlu" target="_blank"><b>MMLU STEM</b></a>,
+          <a href="https://huggingface.co/datasets/cais/mmlu" target="_blank"><b>MMLU Social Sciences</b></a>),
+          and synthetic tasks involving logical reasoning (<b>3SAT</b>), structured puzzle solving (<b>Sudoku</b>),
+          and symbolic computation (<b>Matrix Multiplication</b>). These tasks provide ground-truth labels for measuring
+          verifier quality across skills relevant to real deployment settings.
         </p>
       <br>
       <h2 class="title is-5" style="margin-bottom: 1rem;">Metrics</h2>
         <p>
-          Verifier performance has multiple dimensions, so we track classification metrics like
-          accuracy, false positive rate (FPR), false negative rate (FNR), and also the downstream effect of verifier-based
-          rejection sampling via <b>verifier gain</b>, defined as
+          Verifier accuracy can obscure whether errors are false positives or false negatives. In the limit of repeated
+          rejection sampling, the accuracy of accepted solutions converges to verifier precision. We therefore define
+          <b>verifier gain</b> as verifier precision minus the solver's original accuracy:
         </p>
         <p style="margin-top: 0.75rem; margin-bottom: 0.75rem; text-align: center;">
           \(
-            \underbrace{Gain(S, V; D)}_{\substack{\text{performance improvement} \\ \text{from using verifier}}}
+            \underbrace{Gain(S, V; D)}_{\substack{\text{asymptotic performance} \\ \text{improvement from using verifier}}}
             \;=\;
-            \underbrace{Precision(S, V; D)}_{\substack{\text{accuracy after test-time} \\ \text{rejection sampling with verifier}}}
+            \underbrace{Precision(S, V; D)}_{\substack{\text{asymptotic accuracy after} \\ \text{rejection sampling with verifier}}}
             \;-\;
             \underbrace{SolverAccuracy(S; D)}_{\text{base solver's accuracy}}
             \)
@@ -224,13 +208,14 @@
       <p>
         Our verifier gain metric estimates the expected improvement in a solver's accuracy when using a verifier for
         rejection sampling. To assess how well this metric predicts real performance, we conduct rejection sampling
-        experiments across all solver-verifier pairs from a 12-model subset of our post-trained models. For each
+        experiments across all solver–verifier pairs from a 12-model subset of our post-trained models. For each
         problem in each dataset, the solver generates solutions until the verifier labels one as correct,
         for up to 10 attempts; if no such solution is found, we retain the final attempt.
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
-        Verifier gain reliably predicts rejection sampling gains and serves as a powerful comparative metric for evaluating solver–verifier pairs. Crucially, it can be estimated from a single verification round without costly rejection sampling experiments.
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Takeaway</p>
+        Verifier gain reliably predicts rejection sampling gains and serves as a powerful comparative metric for evaluating solver–verifier pairs. Crucially, it can be estimated from a single round of verifier evaluations without costly rejection sampling experiments.
       </div>
       <br>
       <p style="text-align: center;">
@@ -248,19 +233,17 @@
     <div class="hero-body" style="padding-top: 3rem; padding-bottom: 0rem;">
       <h2 class="title is-3" style="margin-bottom: 1rem;">Do Better Solvers Make Better Verifiers?</h2>
       <p>
-        We first analyze whether a model's solver performance correlates with its performance as a verifier.
-        For each of our 21 post-trained models and each dataset, we evaluate verification on the same
-        set of solver models to obtain verifier accuracy, FPR, FNR, and gain for every solver-verifier pair.
-        For each verifier, we then divide the verifier metrics into three verification settings and average within
-        each setting over solvers and datasets. From the figure below, we realize the answer to this question
-        depends on the verification setting and discover the following takeaways.
+        We test whether a model's solver accuracy predicts its performance as a verifier. For each of 21 post-trained
+        models, we average verifier accuracy, false positive rate (FPR), false negative rate (FNR), and gain over solvers
+        and datasets within each verification setting. The relationship depends on the setting!
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Takeaway</p>
         <ul style="margin-top: 0;">
-          <li>Verifier models are biased toward accepting incorrect solutions when performing self-verification or intra-family verification.</li>
-          <li>Verification accuracy alone is not a reliable predictor of how much a verifier can improve a solver at test time. Instead, computing verifier gain using solver accuracy and verifier precision provides a more reliable metric.</li>
-          <li>While model families like <span class="model-llama3">Llama3</span> and <span class="model-qwen25">Qwen2.5</span> some ability to self-improve, stronger model families like <span class="model-deepseek">DeepSeek</span> and <span class="model-qwen3">Qwen3</span> do not, which we find is linked to the latter already spontaneously self-verifying during solving (73-96% vs. 1-2%).</li>
+          <li>Under self- and intra-family verification, verifiers are more likely to accept incorrect solutions.</li>
+          <li>Verification accuracy does not reliably predict test-time improvement. Verifier gain, which combines solver accuracy and verifier precision, is more informative.</li>
+          <li><span class="model-llama3">Llama3</span> and <span class="model-qwen25">Qwen2.5</span> show some self-improvement. <span class="model-deepseek">DeepSeek</span> and <span class="model-qwen3">Qwen3</span> show negligible gains and spontaneously self-verify far more often during solving (73–96% vs. 1–2%).</li>
         </ul>
       </div>
       <br>
@@ -282,16 +265,15 @@
     <div class="hero-body" style="padding-top: 3rem; padding-bottom: 0rem;">
       <h2 class="title is-3" style="margin-bottom: 1rem;">Are Verifiers Biased Toward Solutions That Resemble Their Own?</h2>
       <p>
-        From the last sections, we saw that reasoning models benefit less from self- and intra-family verification due
-        to high FPR (in comparison to cross-family verification), hinting at an LLM bias in accepting incorrect solutions that
-        resemble their own. To directly investigate this behavior, we conduct cross-verification experiments using 12
-        post-trained models and compute all verifier metrics for each pair. For each pair, we plot the verifier metric
-        against the <b>solver-verifier similarity score</b>, defined as the average cosine similarity between the two models'
-        solution embeddings across all dataset problems. The figure below confirms this hypothesis.
+        Reasoning models have higher FPR under self- and intra-family verification than under cross-family
+        verification, suggesting a bias toward incorrect solutions that resemble their own. We test this hypothesis
+        across 12 post-trained models. For each <b>solver–verifier pair</b>, we compare verifier metrics with the average
+        cosine similarity between the models' solution embeddings.
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
-        Higher similarity between solver and verifier solution distributions increases the verifier’s tendency to accept incorrect solver outputs, reducing verifier gain. Using a verifier with a meaningfully different solution distribution mitigates this bias.
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Takeaway</p>
+        Higher similarity between solver and verifier solution distributions is associated with a greater tendency to accept incorrect solver outputs and with lower verifier gain. Choosing a verifier with a meaningfully different solution distribution can mitigate this bias.
       </div>
       <br>
       <p style="text-align: center;">
@@ -315,13 +297,14 @@
         Our analysis focuses on the <span class="model-qwen25">Qwen2.5-Base</span>/<span class="model-qwen25">Qwen2.5</span>
         and <span class="model-qwen3">Qwen3-Base</span>/<span class="model-qwen3">Qwen3</span> model pairs. For each
         model, we compute verifier metrics against all solvers and datasets, partition results by verification setting,
-        and average within families. From the figure below, we realize the following takeaway.
+        and average within families.
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Takeaway</p>
         Reasoning post-training significantly improves problem-solving but can reduce self- and intra-family verification gains, while boosting cross-family verification performance.
       </div>
-      <div style="height: 0.5rem;"></div>
+      <br>
       <p style="text-align: center;">
         <embed src="static/images/results_posttraining_verifier_barplots_remove_llama-1.png" alt="solver_verifier_cross_study"  width="600" height=auto>
       </p>
@@ -339,8 +322,7 @@
     <div class="hero-body" style="padding-top: 3rem; padding-bottom: 0rem;">
       <h2 class="title is-3" style="margin-bottom: 1rem;">How Does Task Type Affect Verifiability?</h2>
       <p>
-        Thus far, we have examined verifier performance and its contribution to solver accuracy through rejection
-        sampling. We now shift to a task-level perspective and ask two questions:
+        We next ask two task-level questions:
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="margin-bottom: 0;">
@@ -351,16 +333,17 @@
       </div>
       <div style="height: 0.5rem;"></div>
       <p>
-        For each of our 21 post-trained models and each dataset, we evaluate verification on the same set of solver
-        models to obtain verifier accuracy and gain for every solver-verifier pair, average them across all verifier
-        models, and plot them against solver accuracies. From the figure below, we realize the following takeaway.
+        Across 21 post-trained models, we average verifier accuracy and gain over solver–verifier pairs for each task
+        and compare them with solver accuracy.
       </p>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
-        Although tasks that are easy to solve are typically easier to verify, some tasks are inherently easier to
-        verify. These include synthetic problems with logical or structured reasoning (e.g., 3SAT, Sudoku) and
-        real-world tasks relying primarily on mathematical reasoning rather than extensive factual recall
-        (e.g., GSM8K, AIME). Such tasks also yield larger gains from test-time rejection sampling with verifiers.
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Takeaway</p>
+        <ul style="margin-top: 0;">
+          <li>Tasks that are easy to solve tend to be easy to verify.</li>
+          <li>Easier tasks yield larger gains under intra-family and cross-family verification, but not necessarily under self-verification.</li>
+          <li>Across our evaluated models and tasks, logical and mathematical problems are easier to verify and yield larger verifier gains than factual-recall tasks.</li>
+        </ul>
       </div>
       <br>
       <p style="text-align: center;">
@@ -380,21 +363,21 @@
 <section class="hero">
   <div class="container is-max-desktop">
     <div class="hero-body" style="padding-top: 3rem; padding-bottom: 0rem;">
-      <h2 class="title is-3" style="margin-bottom: 1rem;">A Checklist for Designing Effective Solver-Verifier Systems:</h2>
+      <h2 class="title is-3" style="margin-bottom: 1rem;">A Checklist for Designing Effective Solver–Verifier Systems</h2>
       <div style="height: 0.5rem;"></div>
       <div class="content" style="background-color: #f5f5f5; padding: 0.75rem; border-left: 4px solid #3273dc; border-radius: 4px; margin-top: 0rem; margin-bottom: 0rem;">
         <ul style="margin-top: 0;">
-          <li><b>Use verifier gain, not accuracy, to evaluate a solver-verifier pair.</b> Verification accuracy can be misleading, while verifier gain strongly predicts actual rejection sampling gains.
+          <li><b>Use verifier gain, not accuracy, to evaluate a solver–verifier pair.</b> Verification accuracy can be misleading, while verifier gain strongly predicts actual rejection sampling gains.
           </li>
           <li><b>Check whether the task is easier to verify than to solve.</b>
-            Logical and mathematical reasoning tasks yield higher verifier gains than knowledge-recall tasks.
+            Our experiments find higher gains on logical and mathematical reasoning tasks than on knowledge-recall tasks.
           </li>
           <li><b>Prefer verifiers that "think differently" from the solver.</b>
-            Solution-distribution similarity increases false positives and reduces gains.
+            Greater solution-distribution similarity is associated with more false positives and lower gains.
           </li>
-          <li><b>Avoid using strong reasoning models as their own verifiers</b>
-            State-of-the-art models such as <span class="model-qwen3">Qwen3</span> and <span class="model-deepseek">DeepSeek</span>
-            achieve minimal self-improvement, despite being strong solvers.
+          <li><b>Avoid using strong reasoning models as their own verifiers.</b>
+            In our experiments, <span class="model-qwen3">Qwen3</span> and <span class="model-deepseek">DeepSeek</span>
+            show minimal self-improvement despite being strong solvers.
           </li>
         </ul>
       </div>
@@ -428,8 +411,8 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You may reuse this site's source code; please link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
