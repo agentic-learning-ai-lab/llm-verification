@@ -1,6 +1,6 @@
 # When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers
 
-### [Paper](https://arxiv.org/abs/2512.02304) | [Project Page](https://agenticlearning.ai/llm-verification/)
+### [Paper](https://arxiv.org/abs/2512.02304) | [Project Page](https://agenticlearning.ai/llm-verification/) | [Data](https://huggingface.co/datasets/Jacklu0831/llm-verification-raw)
 
 ## Overview
 
@@ -12,6 +12,8 @@ This codebase provides a framework for studying how the end performance of a sol
 - **Rejection sampling**: Solver can iteratively re-solve problems that fail test-time verification. See `src/rejection_sampling.py`.
 - **Embedding analysis**: Compute pairwise similarity between model outputs across different LLMs. See `src/compute_embedding.py`.
 - **Automatic caching**: Efficiently reuse solver outputs when experimenting with different verifier configurations. See `src/solver_cache.py`.
+
+We also release all raw data behind the paper on [Hugging Face](https://huggingface.co/datasets/Jacklu0831/llm-verification-raw): 271,025 solver generations and 70,855 verifier responses, from which every paper figure can be rebuilt (see [Reproducing the Paper Figures](#reproducing-the-paper-figures)).
 
 ## Installation
 
@@ -25,6 +27,21 @@ uv pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pyt
 
 # Install dependencies
 uv pip install -r requirements.txt
+```
+
+## Reproducing the Paper Figures
+
+`aggregate_data/` holds the CSVs behind the paper's figures. Regenerate all 12 figures in `figures/`:
+
+```bash
+python analysis/plot_figures.py
+```
+
+To rebuild `aggregate_data/` from the raw solver and verifier outputs on [Hugging Face](https://huggingface.co/datasets/Jacklu0831/llm-verification-raw):
+
+```bash
+hf download Jacklu0831/llm-verification-raw --repo-type dataset --local-dir raw_data
+python analysis/rebuild_aggregate_data.py --raw-data raw_data --overwrite
 ```
 
 ---
@@ -164,12 +181,10 @@ python src/inference.py \
 
 If you have any questions or find any bugs, please feel free to contact Jack Lu (yl11330@nyu.edu). If you found our work helpful, please consider giving us a ⭐ and citing us!
 ```bibtex
-@misc{lu2025llmverification,
+@inproceedings{lu2026llmverification,
     title={When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers},
     author={Jack Lu and Ryan Teehan and Jinran Jin and Mengye Ren},
-    year={2025},
-    eprint={2512.02304},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+    booktitle={ICLR 2026 Workshop on AI with Recursive Self-Improvement},
+    year={2026}
 }
 ```
