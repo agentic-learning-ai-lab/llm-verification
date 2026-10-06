@@ -50,7 +50,7 @@ DATASET_LABEL = {
 PRIMARY_TASKS = {"AIME", "GSM8K", "3SAT", "Sudoku"}
 PRIMARY_COLOR, OTHER_COLOR = "#d62728", "#1f77b4"
 
-# Family color scheme (matches the paper)
+# Family color scheme
 FAMILY_COLORS = {
     "Qwen3-Base": "#87CEEB",
     "Qwen3": "#1f77b4",

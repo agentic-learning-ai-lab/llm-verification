@@ -177,14 +177,15 @@ python src/inference.py \
 
 ---
 
-## Citations
+## Citation
 
 If you have any questions or find any bugs, please feel free to contact Jack Lu (yl11330@nyu.edu). If you found our work helpful, please consider giving us a ⭐ and citing us!
+
 ```bibtex
 @inproceedings{lu2026llmverification,
-    title={When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers},
-    author={Jack Lu and Ryan Teehan and Jinran Jin and Mengye Ren},
-    booktitle={ICLR 2026 Workshop on AI with Recursive Self-Improvement},
-    year={2026}
+  title     = {When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers},
+  author    = {Lu, Jack and Teehan, Ryan and Jin, Jinran and Ren, Mengye},
+  booktitle = {ICLR 2026 Workshop on AI with Recursive Self-Improvement},
+  year      = {2026}
 }
 ```
