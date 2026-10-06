@@ -1,10 +1,18 @@
-# When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers
+<h1 align="center">When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers</h1>
 
-### [📄 Paper](https://arxiv.org/abs/2512.02304) | [🌐 Project Page](https://agenticlearning.ai/llm-verification/) | [🖼️ Poster](https://jacklu-me.com/assets/pdf/iclr2026-poster-llm-verification.pdf) | [🤗 Data](https://huggingface.co/datasets/Jacklu0831/llm-verification-raw)
+<p align="center">
+  <a href="https://arxiv.org/abs/2512.02304"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2512.02304-b31b1b?logo=arxiv"></a>
+  <a href="https://agenticlearning.ai/llm-verification/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-blue"></a>
+  <a href="https://jacklu-me.com/assets/pdf/iclr2026-poster-llm-verification.pdf"><img alt="Poster" src="https://img.shields.io/badge/Poster-PDF-orange"></a>
+  <a href="https://huggingface.co/datasets/Jacklu0831/llm-verification-raw"><img alt="Dataset" src="https://img.shields.io/badge/HF-Dataset-yellow?logo=huggingface"></a>
+  <a href="https://github.com/agentic-learning-ai-lab/llm-verification/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/agentic-learning-ai-lab/llm-verification"></a>
+</p>
+
+Official code and data for our systematic study of LLMs as solution verifiers across 37 models and 9 benchmarks (ICLR 2026 Workshop on AI with Recursive Self-Improvement).
 
 ## Overview
 
-This codebase provides a framework for studying how the end performance of a solver-verifier system depends on factors like model family, model size, post-training, task type, and more. The frameworks supports:
+This codebase provides a framework for studying how the end performance of a solver-verifier system depends on factors like model family, model size, post-training, task type, and more. The framework supports:
 
 - **Both Real-World and Synthetic Tasks**: Real-world tasks include GSM8K, AIME, MMLU, CommonsenseQA, and GPQA. Synthetic tasks include SAT, Sudoku, Matrix Multiplication (with generation scripts in `src/generate_problems`). See [Supported Datasets](#supported-datasets).
 - **Large Suite of Open-Source Models**: Post-trained models from Llama3, Qwen2.5, Qwen3, and DeepSeek-R1 families. Base models from Llama3, Qwen2.5, Qwen3 families. See [Supported Models](#supported-models).
