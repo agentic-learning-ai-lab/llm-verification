@@ -137,27 +137,27 @@ See `Table 1` in our [paper](https://arxiv.org/abs/2512.02304) for all supported
 
 ### Synthetic Datasets
 
-These datasets are generated on-the-fly in `inference.py` with configurable parameters via `--data_generation_kwargs`. In the [paper](https://arxiv.org/abs/2512.02304), we use the following generation parameters, but feel free to play around with them to see how they affect difficulty!
+These datasets are generated on-the-fly in `inference.py` with configurable parameters via `--data_generation_kwargs`. In the [paper](https://arxiv.org/abs/2512.02304), we use the following generation parameters (every run records its parameters in the [raw data](https://huggingface.co/datasets/Jacklu0831/llm-verification-raw)), but feel free to play around with them to see how they affect difficulty!
 
-#### 2SAT/3SAT
+#### 3SAT
 
 ```bash
 --dataset_name sat \
---data_generation_kwargs "sat_type=2,num_samples=100,min_vars=2,max_vars=8,min_clauses=2,max_clauses=8,seed=42"
+--data_generation_kwargs "sat_type=3,num_samples=1000,min_vars=3,max_vars=8,min_clauses=2,max_clauses=8,seed=42"
 ```
 
 #### Sudoku
 
 ```bash
 --dataset_name sudoku \
---data_generation_kwargs "size=4,num_samples=100,min_empty=4,max_empty=8,seed=42"
+--data_generation_kwargs "size=9,num_samples=1000,min_empty=12,max_empty=12,seed=42"
 ```
 
 #### Matrix Multiplication
 
 ```bash
 --dataset_name matmul \
---data_generation_kwargs "size=5,num_samples=100,min_val=-5,max_val=5,seed=42"
+--data_generation_kwargs "size=4,num_samples=1000,min_val=-5,max_val=5,seed=42"
 ```
 
 ---
