@@ -8,7 +8,7 @@
   <a href="https://github.com/agentic-learning-ai-lab/llm-verification/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/agentic-learning-ai-lab/llm-verification"></a>
 </p>
 
-Official code and data for our systematic study of LLMs as solution verifiers across 37 models and 9 benchmarks (ICLR 2026 Workshop on AI with Recursive Self-Improvement).
+Official code and data for our systematic study of LLMs as solution verifiers across 37 models and 9 benchmarks (ICLR 2026 Workshop on AI with Recursive Self-Improvement). Solver-verifier pairs are a common building block of multi-agent LLM systems, in which one model checks another's work.
 
 ## Overview
 
