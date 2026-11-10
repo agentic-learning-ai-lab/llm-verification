@@ -1,6 +1,14 @@
 <h1 align="center">When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers</h1>
 
 <p align="center">
+  <a href="https://jacklu-me.com/">Jack Lu</a><sup>*</sup>,
+  <a href="https://rteehas.github.io/">Ryan Teehan</a><sup>*</sup>,
+  <a href="https://www.linkedin.com/in/jinran-jin-093252319/">Jinran Jin</a>,
+  <a href="https://mengyeren.com/">Mengye Ren</a><br>
+  New York University, <sup>*</sup>Equal contribution
+</p>
+
+<p align="center">
   <a href="https://arxiv.org/abs/2512.02304"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2512.02304-b31b1b?logo=arxiv"></a>
   <a href="https://agenticlearning.ai/llm-verification/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-blue"></a>
   <a href="https://jacklu-me.com/assets/pdf/iclr2026-poster-llm-verification.pdf"><img alt="Poster" src="https://img.shields.io/badge/Poster-PDF-orange"></a>
